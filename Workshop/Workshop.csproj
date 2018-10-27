@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Index.aspx" />
+    <Content Include="IndexBeautify.aspx" />
+    <Content Include="script.sql" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -86,6 +88,13 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexBeautify.aspx.cs">
+      <DependentUpon>IndexBeautify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexBeautify.aspx.designer.cs">
+      <DependentUpon>IndexBeautify.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
