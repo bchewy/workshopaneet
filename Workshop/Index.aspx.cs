@@ -16,6 +16,7 @@ namespace Workshop
         {
             LoadMessages();
         }
+        
         public void LoadMessages()
         {
             string strConn = ConfigurationManager.ConnectionStrings["ourConnectionString"].ToString();
@@ -44,14 +45,33 @@ namespace Workshop
             conn.Close();
 
         }
+        public bool checkData(string name, string cno, string msg)
+        {
+            if (name.Length >= 10 && cno.Length>=8 && msg.Length>=1)
+            {
+                return true;
+            }
+            else
+                return false;
 
+        }
         protected void Button1_Click(object sender, EventArgs e)
         {
+            
             string name = TextBox1.Text;
             string cno = TextBox2.Text;
             string msg = TextBox3.Text;
+            if (checkData(name, cno, msg))
+            {
+                lblData.Text += "\n" + name + ", no:" + cno + " said " + msg + "\n";
 
-            saveMessage(name, cno, msg);
+                saveMessage(name, cno, msg);
+            }
+            else
+            {
+                lblData.Text = "Please tpye something lah!";
+            }
+
         }
     }
 }

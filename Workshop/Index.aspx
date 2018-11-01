@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <p>
-    &nbsp;</p>
+        &nbsp;</p>
 <p>
     <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
         <AlternatingRowStyle BackColor="White" />
@@ -19,6 +19,7 @@
         <SortedDescendingCellStyle BackColor="#D4DFE1" />
         <SortedDescendingHeaderStyle BackColor="#15524A" />
     </asp:GridView>
+    <asp:Label ID="lblData" runat="server" Text=""></asp:Label>
 </p>
 <p>
     &nbsp;</p>
